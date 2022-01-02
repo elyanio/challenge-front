@@ -31,7 +31,7 @@ const Tab = ({
           <Button
             key={Math.random()}
             label={t}
-            margin="0px 15px 0px 0px"
+            margin="10px 15px 0px 0px"
             background={selectedIndex === i ? selectedBg : defaultBg}
             onClick={onClickCallback(i)}
           />
@@ -50,9 +50,10 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
+  flex-wrap: wrap;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding: 15px 0px 15px 15px;
+  padding: 5px 0px 15px 15px;
   background: lightgray;
 `;
 

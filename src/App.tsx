@@ -93,27 +93,35 @@ function App() {
                 <Button
                   key={Math.random()}
                   label="Delete"
-                  margin="0px 15px 0px 0px"
+                  margin="10px 15px 0px 0px"
+                  padding="0px 5px 0px 10px"
                   background={red}
+                  rightIcon="trash"
                 />
                 <Button
                   key={Math.random()}
                   label="Advice"
-                  margin="0px 15px 0px 0px"
+                  margin="10px 15px 0px 0px"
+                  padding="0px 5px 0px 10px"
                   background={goldenrod}
+                  rightIcon="lightBulb"
                 />
                 <Button
                   key={Math.random()}
                   label="Create"
-                  margin="0px 15px 0px 0px"
+                  margin="10px 15px 0px 0px"
+                  padding="0px 10px 0px 5px"
                   background={lightcoral}
                   color="black"
+                  leftIcon="plusCircle"
                 />
                 <Button
                   key={Math.random()}
                   label="Submit"
-                  margin="0px 15px 0px 0px"
+                  margin="10px 15px 0px 0px"
+                  padding="0px 5px 0px 10px"
                   background={lightseagreen}
+                  rightIcon="rightArrow"
                 />
               </ActionPanel>
             </Tab>
@@ -146,6 +154,7 @@ const List = styled.div<StyledProps>`
 const ActionPanel = styled.div<StyledProps>`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin: 25px 10px;
 `;

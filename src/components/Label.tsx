@@ -5,6 +5,7 @@ export interface LabelProps {
   size?: string;
   cursor?: string;
   fontWeight?: string;
+  margin?: string;
 }
 
 const Label = styled.p<LabelProps>`
@@ -12,7 +13,7 @@ const Label = styled.p<LabelProps>`
   color: ${({ color }: LabelProps) => color || 'black'};
   font-size: ${({ size }: LabelProps) => size || '16px'};
   font-weight: ${({ fontWeight }: LabelProps) => fontWeight || 'normal'};
-  margin: 0px;
+  margin: ${({ margin }: LabelProps) => (margin ? `${margin}` : '0px')};
 `;
 
 export default Label;
