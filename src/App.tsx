@@ -86,6 +86,7 @@ function App() {
                     label={user}
                     margin="15px 0px 0px 0px"
                     background={purple}
+                    cursor="default"
                   />
                 ))}
               </List>

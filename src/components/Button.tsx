@@ -14,6 +14,7 @@ interface StyledProps {
   background?: string;
   margin?: string;
   padding?: string;
+  cursor?: string;
 }
 
 const Button = ({
@@ -43,7 +44,7 @@ const ButtonStyled = styled.button<StyledProps>`
   border-radius: 15px;
   ${({ padding }) => (padding ? `padding: ${padding};` : 'padding: 0px 15px;')}
   border: none;
-  cursor: pointer;
+  cursor: ${({ cursor }) => cursor || 'pointer'};
   ${({ background }) => (background ? `background: ${background};` : '')}
   ${({ margin }) => (margin ? `margin: ${margin};` : '')}
 `;
