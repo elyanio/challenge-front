@@ -9,10 +9,11 @@ import getUserByModule from './utils';
 function App() {
   const { red, goldenrod, lightcoral, lightseagreen, purple } =
     theme.palette.backgrounds;
+
   const { users, loading, error } = useLoadUser();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+  // states
   const [currModuleTypeIndex, setCurrModuleType] = useState(0);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currModuleIndex, setcurrModuleIndex] = useState(0);
 
   const modules = useMemo(() => getUserByModule(users), [users]);
@@ -66,12 +67,16 @@ function App() {
       <Container margin="30px">
         <Tab
           tabs={['Content_module', 'Auth_module']}
-          selectedIndex={currModuleTypeIndex}>
+          selectedIndex={currModuleTypeIndex}
+          onClick={setCurrModuleType}>
           <Container margin="10px 15px 12px 15px">
-            <Tab tabs={modulesName || []} selectedIndex={currModuleIndex}>
+            <Tab
+              tabs={modulesName || []}
+              selectedIndex={currModuleIndex}
+              onClick={setcurrModuleIndex}>
               <InfoPanel>
                 <Label fontWeight="bold">
-                  {`Number of users in module: ${currUsersName.length}`}
+                  {`Number of users in module ${currUsersName.length}:`}
                 </Label>
               </InfoPanel>
               <List>
