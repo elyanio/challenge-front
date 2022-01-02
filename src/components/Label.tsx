@@ -4,12 +4,15 @@ export interface LabelProps {
   color?: string;
   size?: string;
   cursor?: string;
+  fontWeight?: string;
 }
 
 const Label = styled.p<LabelProps>`
   ${({ cursor }) => (cursor ? `cursor: ${cursor}` : '')};
-  color: ${({ color }: Partial<LabelProps>) => color || 'black'};
-  font-size: ${({ size }: Partial<LabelProps>) => size || '14px'};
+  color: ${({ color }: LabelProps) => color || 'black'};
+  font-size: ${({ size }: LabelProps) => size || '16px'};
+  font-weight: ${({ fontWeight }: LabelProps) => fontWeight || 'normal'};
+  margin: 0px;
 `;
 
 export default Label;
