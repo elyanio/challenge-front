@@ -24,7 +24,7 @@ const Tab = ({
             key={Math.random()}
             label={t}
             margin="0px 15px 0px 0px"
-            background={selectedIndex === i ? defaultBg : selectedBg}
+            background={selectedIndex === i ? selectedBg : defaultBg}
           />
         ))}
       </Header>
